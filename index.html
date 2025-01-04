@@ -25,6 +25,11 @@
         h1, h2, h3, h4 {
             margin: 0;
         }
+        /* 추가된 코드 */
+        h3, p {
+            margin: 0;  /* h3와 p 태그의 기본 여백 제거 */
+        }
+
 
         /* Header Section */
 /* Header Section */
@@ -316,11 +321,14 @@ Copy code
         }
 
 
+    
         /* Footer */
+
+
         footer {
             background: linear-gradient(135deg, #1a1a2e, #2f2f4f);
             color: white;
-            padding: 40px 60px;
+            padding: 60px 80px;  
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -330,16 +338,16 @@ Copy code
             max-width: 100%;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 40px;
             margin-left: 10px;
         }
         
         .footer-avatar {
-            width: 100%;          /* 배너 전체 너비에 꽉 차게 */
-            height: 200px;        /* 배너 높이 */
-            object-fit: cover;    /* 이미지 비율을 유지하며 꽉 차게 */
-            border-radius: 0px;   /* 둥근 모서리를 직각으로 변경 */
-            margin-right: 0;      /* 여백 제거 */
+            width: 35%;          /* 프로필 사진의 너비 */
+            max-width: 300px;    /* 사진 최대 너비 */
+            height: auto;        /* 원본 비율 유지 */
+            object-fit: contain; /* 이미지 비율을 유지하면서 배너에 꽉 차게 */
+            border-radius: 0px;  /* 직사각형 모서리 */
         }
         
         .footer-icons a {
