@@ -27,42 +27,49 @@
         }
 
         /* Header Section */
+/* Header Section */
         header {
-            text-align: center;
-            padding: 80px 20px;
+            text-align: left;  /* 왼쪽 정렬 */
+            padding: 40px 60px;  /* 상하좌우 패딩 조정 */
             background-color: #1a1a2e;
             color: white;
-            position: relative;
         }
+        
         header h1 {
-            font-size: 3rem;
-            font-weight: 700;
+            font-size: 2rem;  /* 글씨 크기 축소 */
+            font-weight: 600;
             margin-bottom: 10px;
         }
+        
         header p {
-            font-size: 1.2rem;
+            font-size: 1rem;  /* 설명 글씨 크기 축소 */
+            color: #ccc;
+            line-height: 1.5;
+        }
+        
+        header .about {
+            margin-top: 10px;
+            font-size: 0.9rem;  /* 소개 글씨 크기 축소 */
             color: #aaa;
         }
-        header .about {
-            margin-top: 20px;
-            font-size: 1.1rem;
-            color: #ccc;
-        }
+        
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 8px 16px;  /* 버튼 크기 축소 */
             margin-top: 20px;
-            border: 2px solid white;
+            border: 1.5px solid white;  /* 얇은 버튼 테두리 */
             color: white;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 25px;
+            font-size: 0.9rem;  /* 버튼 글씨 크기 축소 */
+            font-weight: 500;
+            border-radius: 20px;
             transition: background-color 0.3s, color 0.3s;
         }
+        
         .btn:hover {
             background-color: white;
             color: #1a1a2e;
         }
+
 
         /* Dark Mode Toggle Icon */
         .dark-mode-toggle {
@@ -181,10 +188,13 @@
 <!-- Header Section -->
 <header>
     <i class="fas fa-moon dark-mode-toggle" id="darkModeToggle"></i>
-    <h1>Brynn (Ye In) Lee</h1>
-    <p>Welcome to my portfolio website! Scroll down to see my projects, research, and media mentions.</p>
-    <p class="about">MS Data Science New Grad | AI/ML in Deepfake Detection 🕵🏻‍♀️ & Resource Optimization 🚒 | NY & CA</p>
-    <p class="about">Data Scientist with 3+ years of experience in AI/ML, specializing in deepfake detection and resource optimization.</p>
+    <div>
+        <h1>Brynn (Ye In) Lee</h1>
+        <p>Welcome to my portfolio website! Explore my projects, research, and media mentions below.</p>
+        <p class="about">MS Data Science New Grad | AI/ML in Deepfake Detection 🕵🏻‍♀️ & Resource Optimization 🚒 | NY & CA</p>
+        <p class="about">Data Scientist with 3+ years of experience in AI/ML, specializing in deepfake detection and resource optimization.</p>
+        <a href="#projects" class="btn">Explore Projects</a>
+    </div>
 </header>
 
 <!-- Projects Section -->
