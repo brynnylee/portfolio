@@ -32,7 +32,7 @@
 
 
         /* Header Section */
-/* Header Section */
+
         header {
             text-align: left;
             padding: 40px 60px;
@@ -128,11 +128,7 @@
             flex-wrap: wrap;
         }
 
-Here's the complete code incorporating the requested enhancements:
 
-Final Code with All Enhancements
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -256,7 +252,6 @@ Copy code
         }
         .card {
             width: 300px;
-            height: 200px;  /* 고정 높이 설정 */
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -264,14 +259,15 @@ Copy code
             transition: transform 0.3s ease-in-out, background-color 0.3s ease;
             position: relative;
         }
-
-        .card img {
-            width: 100%;          /* 전체 너비 */
-            height: 100%;         /* 카드 높이 맞춤 */
-            object-fit: contain;  /* 비율 유지하며 카드 안에 맞춤 */
-            border-radius: 10px;
+        .card-thumbnail {
+            width: 100%;                  /* 카드 너비에 맞춤 */
+            height: 200px;                 /* 동일한 높이로 설정 */
+            background-size: cover;        /* 비율을 유지하면서 꽉 차게 */
+            background-position: center;   /* 중앙 정렬 */
+            background-repeat: no-repeat;  /* 이미지 반복 방지 */
+            border-radius: 15px 15px 0 0;  /* 둥근 모서리 */
         }
-
+        
         /* 카드 Hover 시 네온 효과 */
         .card:hover {
             transform: scale(1.05);
@@ -436,13 +432,14 @@ Copy code
 </header>
 
 <!-- Projects Section -->
+
 <section id="projects">
     <h2 class="section-title">Projects</h2>
     <div class="grid-container">
         <!-- Project 1 -->
         <div class="card">
             <a href="https://github.com/brynnylee/Emergency-Response-Resource-Optimization-for-RFD.git" target="_blank">
-                <img src="https://raw.githubusercontent.com/brynnylee/portfolio/main/assets/thumbnail_fire.gif" alt="Project 3 Thumbnail">
+                <div class="card-thumbnail" style="background-image: url('https://raw.githubusercontent.com/brynnylee/portfolio/main/assets/thumbnail_fire.gif');"></div>
                 <div class="card-content">
                     <h3 class="card-title">Emergency Resource Optimization</h3>
                     <p class="card-description">Optimizing emergency response resources for fire departments.</p>
@@ -452,7 +449,7 @@ Copy code
         <!-- Project 2 -->
         <div class="card">
             <a href="https://github.com/brynnylee/Real-Time-X-Tweet-Sentiment-Analysis.git" target="_blank">
-                <img src="https://raw.githubusercontent.com/brynnylee/portfolio/main/assets/thumbnail_twitter.gif" alt="Project 2 Thumbnail">
+                <div class="card-thumbnail" style="background-image: url('https://raw.githubusercontent.com/brynnylee/portfolio/main/assets/thumbnail_twitter.gif');"></div>
                 <div class="card-content">
                     <h3 class="card-title">Real-Time Sentiment Analysis</h3>
                     <p class="card-description">A real-time sentiment analysis engine for social media.</p>
@@ -462,7 +459,7 @@ Copy code
         <!-- Project 3 -->
         <div class="card">
             <a href="https://github.com/brynnylee/US-Homelessness-Patterns-and-Media-Representation.git" target="_blank">
-                <img src="https://raw.githubusercontent.com/brynnylee/portfolio/1e7947196f8930d2a79cbb8cb6b37c6613218443/assets/thumbnail_homeless.gif" alt="Project 1 Thumbnail">
+                <div class="card-thumbnail" style="background-image: url('https://raw.githubusercontent.com/brynnylee/portfolio/1e7947196f8930d2a79cbb8cb6b37c6613218443/assets/thumbnail_homeless.gif');"></div>
                 <div class="card-content">
                     <h3 class="card-title">US Homelessness Analysis</h3>
                     <p class="card-description">Analyzing media representation of homelessness.</p>
@@ -472,18 +469,17 @@ Copy code
     </div>
 </section>
 
-
 <!-- Research Section -->
 <section>
     <h2 class="section-title">Research</h2>
     <div class="grid-container">
         <div class="card">
             <a href="https://labsites.rochester.edu/air/" target="_blank">
-                <img src="https://raw.githubusercontent.com/brynnylee/portfolio/70b56f770522b6048ca22f2d5e1f9a09deea1ef1/assets/thumbnail_samo.gif" alt="Research Thumbnail">
+                <div class="card-thumbnail" style="background-image: url('https://raw.githubusercontent.com/brynnylee/portfolio/70b56f770522b6048ca22f2d5e1f9a09deea1ef1/assets/thumbnail_samo.gif');"></div>
                 <div class="card-content">
                     <h3 class="card-title">Graduate Research Assistant - AIR Lab</h3>
                     <p class="card-description">
-                        Elevating a voice deepfake detection pipeline by upgrading architectures and integrating 20K+ diverse datasets, enhancing model generalization and scalability.<br>
+                        Elevating a voice deepfake detection pipeline by upgrading architectures and integrating 20K+ diverse datasets, enhancing model generalization and scalability.
                     </p>
                 </div>
             </a>
@@ -497,12 +493,12 @@ Copy code
     <div class="grid-container">
         <div class="card">
             <a href="https://www.rochester.edu/newscenter/data-science-rochester-fire-department-emergency-responses-633002/" target="_blank">
-                <img src="https://via.placeholder.com/300x200" alt="Media Thumbnail">
+                <div class="card-thumbnail" style="background-image: url('https://via.placeholder.com/300x200');"></div>
                 <div class="card-content">
                     <h3 class="card-title">Emergency Response & Resource Optimization</h3>
                     <p class="card-description">
-                        The five-member data science team I am leading, in collaboration with the City of Rochester, was featured in the University of Rochester News Center (Dec 2024).<br>
-                     </p>
+                        The five-member data science team I am leading, in collaboration with the City of Rochester, was featured in the University of Rochester News Center (Dec 2024).
+                    </p>
                 </div>
             </a>
         </div>
