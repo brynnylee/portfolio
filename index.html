@@ -4,54 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brynn (Ye In) Lee - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        /* General Styles */
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        h1, h2, h3, h4 {
+            margin: 0;
+        }
+
+        /* Header */
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 40px 20px;
             text-align: center;
+            padding: 80px 20px;
+            background-color: #1a1a2e;
+            color: white;
         }
         header h1 {
             font-size: 3rem;
-            margin: 0;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         header p {
             font-size: 1.2rem;
-            margin: 10px 0 30px;
+            color: #aaa;
         }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 20px;
+            border: 2px solid white;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background-color: white;
+            color: #1a1a2e;
+        }
+
+        /* Section */
         section {
             padding: 60px 20px;
             text-align: center;
         }
         .section-title {
-            font-size: 2rem;
+            font-size: 2.4rem;
             margin-bottom: 40px;
+            color: #1a1a2e;
         }
         .grid-container {
             display: flex;
-            justify-content: center;
             gap: 20px;
+            justify-content: center;
             flex-wrap: wrap;
         }
         .card {
             width: 300px;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
         .card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.05);
         }
         .card img {
-            width: 100%;
             height: 200px;
             object-fit: cover;
         }
@@ -59,37 +94,82 @@
             padding: 20px;
         }
         .card-title {
-            font-size: 1.4rem;
-            margin: 0 0 10px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         .card-description {
             font-size: 1rem;
             color: #666;
         }
+
+        /* Scroll Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
         footer {
-            background-color: #f4f4f4;
+            background-color: #1a1a2e;
+            color: white;
             padding: 40px 20px;
-        }
-        .footer-inner {
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .footer-inner img {
-            width: 150px;
-            border-radius: 50%;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         .footer-content {
-            flex: 1;
-            padding-left: 20px;
+            text-align: center;
+            max-width: 400px;
         }
-        .social-icons a {
+        .footer-icons a {
             margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+        .footer-icons a:hover {
+            color: #4CAF50;
+        }
+
+        /* Dark Mode Toggle */
+        .toggle-dark-mode {
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .toggle-dark-mode:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Dark Mode */
+        body.dark {
+            background-color: #1a1a2e;
+            color: white;
+        }
+        body.dark .card {
+            background-color: #333;
+        }
+        body.dark .card-content {
+            color: white;
+        }
+        body.dark header, body.dark footer {
+            background-color: #0e0e1f;
         }
     </style>
 </head>
@@ -98,13 +178,19 @@
 <!-- Header Section -->
 <header>
     <h1>Brynn (Ye In) Lee</h1>
-    <p>Welcome to my portfolio! I'm passionate about data, machine learning, and research. Below are my projects, research, and media mentions.</p>
+    <p>Welcome to my modern portfolio website. Scroll down to see my projects, research, and media mentions.</p>
+    <a href="#projects" class="btn">Explore Projects</a>
 </header>
 
+<!-- Dark Mode Toggle -->
+<div style="text-align:center; margin-top: 20px;">
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+
 <!-- Projects Section -->
-<section>
+<section id="projects">
     <h2 class="section-title">Projects</h2>
-    <div class="grid-container">
+    <div class="grid-container reveal">
         <div class="card">
             <a href="https://github.com/brynnylee/US-Homelessness-Patterns-and-Media-Representation.git" target="_blank">
                 <img src="https://via.placeholder.com/300x200" alt="Project 1 Thumbnail">
@@ -118,7 +204,7 @@
             <a href="https://github.com/brynnylee/Real-Time-X-Tweet-Sentiment-Analysis.git" target="_blank">
                 <img src="https://via.placeholder.com/300x200" alt="Project 2 Thumbnail">
                 <div class="card-content">
-                    <h3 class="card-title">Real-Time X (Twitter) Sentiment Analysis</h3>
+                    <h3 class="card-title">Real-Time X Sentiment Analysis</h3>
                     <p class="card-description">A real-time sentiment analysis engine for social media discussions.</p>
                 </div>
             </a>
@@ -135,54 +221,39 @@
     </div>
 </section>
 
-<!-- Research Section -->
-<section>
-    <h2 class="section-title">Research</h2>
-    <div class="grid-container">
-        <div class="card">
-            <a href="#" target="_blank">
-                <img src="https://via.placeholder.com/300x200" alt="Research Thumbnail">
-                <div class="card-content">
-                    <h3 class="card-title">Research Title</h3>
-                    <p class="card-description">Brief description of the research conducted.</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Press/Media Section -->
-<section>
-    <h2 class="section-title">Press/Media</h2>
-    <div class="grid-container">
-        <div class="card">
-            <a href="#" target="_blank">
-                <img src="https://via.placeholder.com/300x200" alt="Media Thumbnail">
-                <div class="card-content">
-                    <h3 class="card-title">Media Coverage Title</h3>
-                    <p class="card-description">A brief overview of media coverage related to my work.</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Footer Section -->
+<!-- Footer -->
 <footer>
-    <div class="footer-inner">
-        <img src="https://via.placeholder.com/150" alt="Profile Picture">
-        <div class="footer-content">
-            <h3>Brynn (Ye In) Lee</h3>
-            <p>Data Scientist & Machine Learning Enthusiast. I'm always eager to collaborate on innovative projects!</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a>
-                <a href="https://github.com/brynnylee" target="_blank">🔗 GitHub</a>
-                <a href="resume.pdf" target="_blank">📄 Resume</a>
-                <a href="mailto:youremail@example.com">✉️ Email</a>
-            </div>
+    <div class="footer-content">
+        <h3>Brynn (Ye In) Lee</h3>
+        <p>Data Scientist | Machine Learning Enthusiast | Open to Collaboration</p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/brynnylee" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 </footer>
+
+<!-- Scroll Animation Script -->
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+    window.addEventListener('scroll', reveal);
+
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+    }
+</script>
 
 </body>
 </html>
