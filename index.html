@@ -102,7 +102,8 @@
             -webkit-background-clip: text;  /* Clip the background to the text (icon) */
             color: transparent;  /* Make text (or icon) transparent to show the gradient */
             transform: scale(1.1);  /* Slightly increase size for interaction */
-            transition: transform 0.3s ease, background 0.3s ease;  /* Smooth transition for size and background */
+            box-shadow: 0 0 20px rgba(106, 17, 203, 0.8), 0 0 40px rgba(37, 117, 252, 0.6); /* Neon glowing effect */
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for size, background, and glow */
         }
 
 
@@ -378,7 +379,7 @@
             margin: 0 10px;
             color: white;
             font-size: 1.5rem;
-            transition: color 0.3s;
+            transition: font-size 0.3s ease;  /* Smooth transition for the font size */
         }
         
         /* Footer Icons Hover */
@@ -386,9 +387,11 @@
             background: linear-gradient(135deg, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)); /* Purple to Blue gradient */
             -webkit-background-clip: text;  /* Clip the background to the text (icon) */
             color: transparent;  /* Make text (or icon) transparent to show the gradient */
-            transform: scale(1.1);  /* Slightly increase size for interaction */
-            transition: transform 0.3s ease, background 0.3s ease;  /* Smooth transition for size and background */
+            transform: scale(1.2);  /* Increase size by 20% for interaction */
+            box-shadow: 0 0 20px rgba(106, 17, 203, 0.8), 0 0 40px rgba(37, 117, 252, 0.6); /* Neon glowing effect */
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for size, background, and glow */
         }
+
 
         /* SVG Background Animation */
         .animated-background {
