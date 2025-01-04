@@ -3,107 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Brynn (Ye In) Lee - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
             padding: 40px 20px;
             text-align: center;
         }
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border: 2px solid white;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            background-color: white;
-            color: #333;
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 30px;
         }
         section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
-        .about {
-            background-color: #f9f9f9;
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
         }
-        .projects {
-            background-color: #4caf50;
-            color: white;
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        .projects h2 {
-            margin-bottom: 30px;
-        }
-        .projects .project-card {
-            display: inline-block;
+        .card {
             width: 300px;
-            padding: 20px;
-            margin: 10px;
             background-color: white;
-            color: black;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.4rem;
+            margin: 0 0 10px;
+        }
+        .card-description {
+            font-size: 1rem;
+            color: #666;
         }
         footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+        }
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
+        }
+        .footer-inner img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .footer-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio!</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm an aspiring developer building my first portfolio website. I love coding and solving problems!</p>
-        <img src="https://via.placeholder.com/300" alt="Profile Picture" style="border-radius: 50%;">
-    </section>
+<!-- Header Section -->
+<header>
+    <h1>Brynn (Ye In) Lee</h1>
+    <p>Welcome to my portfolio! I'm passionate about data, machine learning, and research. Below are my projects, research, and media mentions.</p>
+</header>
 
-    <section class="projects" id="projects">
-        <h2>My Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>A brief description of the project goes here. You can link to your GitHub project!</p>
-            <a href="#" style="display: inline-block; margin-top: 10px; color: #4caf50; background: white; padding: 10px 20px; border-radius: 20px;">View Project</a>
+<!-- Projects Section -->
+<section>
+    <h2 class="section-title">Projects</h2>
+    <div class="grid-container">
+        <div class="card">
+            <a href="https://github.com/brynnylee/US-Homelessness-Patterns-and-Media-Representation.git" target="_blank">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1 Thumbnail">
+                <div class="card-content">
+                    <h3 class="card-title">US Homelessness & Media Representation</h3>
+                    <p class="card-description">An analysis of homelessness patterns and how media represents this topic.</p>
+                </div>
+            </a>
         </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>This is another cool project to showcase!</p>
-            <a href="#" style="display: inline-block; margin-top: 10px; color: #4caf50; background: white; padding: 10px 20px; border-radius: 20px;">View Project</a>
+        <div class="card">
+            <a href="https://github.com/brynnylee/Real-Time-X-Tweet-Sentiment-Analysis.git" target="_blank">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2 Thumbnail">
+                <div class="card-content">
+                    <h3 class="card-title">Real-Time X (Twitter) Sentiment Analysis</h3>
+                    <p class="card-description">A real-time sentiment analysis engine for social media discussions.</p>
+                </div>
+            </a>
         </div>
-    </section>
+        <div class="card">
+            <a href="https://github.com/brynnylee/Emergency-Response-Resource-Optimization-for-RFD.git" target="_blank">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3 Thumbnail">
+                <div class="card-content">
+                    <h3 class="card-title">Emergency Resource Optimization</h3>
+                    <p class="card-description">Optimizing emergency response resources for fire departments.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
-    <footer id="contact">
-        <p>&copy; 2025 My Name. All rights reserved.</p>
-        <p>Email: <a href="mailto:youremail@example.com" style="color: lightblue;">youremail@example.com</a></p>
-    </footer>
+<!-- Research Section -->
+<section>
+    <h2 class="section-title">Research</h2>
+    <div class="grid-container">
+        <div class="card">
+            <a href="#" target="_blank">
+                <img src="https://via.placeholder.com/300x200" alt="Research Thumbnail">
+                <div class="card-content">
+                    <h3 class="card-title">Research Title</h3>
+                    <p class="card-description">Brief description of the research conducted.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Press/Media Section -->
+<section>
+    <h2 class="section-title">Press/Media</h2>
+    <div class="grid-container">
+        <div class="card">
+            <a href="#" target="_blank">
+                <img src="https://via.placeholder.com/300x200" alt="Media Thumbnail">
+                <div class="card-content">
+                    <h3 class="card-title">Media Coverage Title</h3>
+                    <p class="card-description">A brief overview of media coverage related to my work.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-inner">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+        <div class="footer-content">
+            <h3>Brynn (Ye In) Lee</h3>
+            <p>Data Scientist & Machine Learning Enthusiast. I'm always eager to collaborate on innovative projects!</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/brynnylee" target="_blank">🔗 GitHub</a>
+                <a href="resume.pdf" target="_blank">📄 Resume</a>
+                <a href="mailto:youremail@example.com">✉️ Email</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
