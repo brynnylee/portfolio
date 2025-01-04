@@ -256,6 +256,7 @@ Copy code
         }
         .card {
             width: 300px;
+            height: 200px;  /* 고정 높이 설정 */
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -263,6 +264,14 @@ Copy code
             transition: transform 0.3s ease-in-out, background-color 0.3s ease;
             position: relative;
         }
+
+        .card img {
+            width: 100%;          /* 전체 너비 */
+            height: 100%;         /* 카드 높이 맞춤 */
+            object-fit: contain;  /* 비율 유지하며 카드 안에 맞춤 */
+            border-radius: 10px;
+        }
+
         /* 카드 Hover 시 네온 효과 */
         .card:hover {
             transform: scale(1.05);
