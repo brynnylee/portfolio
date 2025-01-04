@@ -328,7 +328,7 @@ Copy code
         footer {
             background: linear-gradient(135deg, #1a1a2e, #2f2f4f);
             color: white;
-            padding: 10px 10px;  
+            padding: 0px 0px; /* 프로필 사진 위아래 여백 (기본:0) */ 
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -339,7 +339,7 @@ Copy code
             display: flex;
             align-items: center;
             gap: 60px;
-            margin-left: 0px;
+            margin-left: -10px; /* 프로필 사진 왼쪽 여백 (기본:-10) */
         }
         
         .footer-avatar {
@@ -352,7 +352,7 @@ Copy code
 
         h3 {
             margin-bottom: 10px;  /* 이름 아래 여백 추가 */
-            font-size: 2rem;  /* 이름 크기를 더 크게 */
+            font-size: 1.5rem;  /* 이름 크기를 더 크게 */
             font-weight: 700;  /* 더 두껍게 강조 */
         }
         
