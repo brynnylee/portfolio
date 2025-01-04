@@ -75,7 +75,7 @@
         .dark-mode-toggle {
             position: absolute;
             top: 40px;
-            right: 30px;
+            right: 40px;
             font-size: 1.3rem;
             cursor: pointer;
             color: white;
@@ -109,10 +109,37 @@
             overflow: hidden;
             transition: transform 0.3s ease-in-out, background-color 0.3s ease;
         }
+        /* 카드 Hover 시 네온 색상 적용 */
         .card:hover {
             transform: scale(1.05);
-            background-color: #e6f7ff;
+            background-color: #0ef5ff;  /* 밝은 네온 블루 컬러 */
+            box-shadow: 0 0 15px rgba(14, 245, 255, 0.8);  /* 네온 효과 */
         }
+        
+        /* 다크모드에서도 Hover 효과 */
+        body.dark .card:hover {
+            background-color: #39ff14;  /* 네온 그린 컬러 */
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.8);  /* 네온 그린 글로우 */
+        }
+        
+        /* 버튼 Hover 시 네온 효과 */
+        .btn:hover {
+            background-color: #0ef5ff;  /* 네온 블루 */
+            color: black;
+            box-shadow: 0 0 10px #0ef5ff;
+        }
+        
+        body.dark .btn:hover {
+            background-color: #39ff14;  /* 다크모드용 네온 그린 */
+            color: black;
+            box-shadow: 0 0 10px #39ff14;
+        }
+        
+        /* 다크모드 토글 아이콘 Hover */
+        .dark-mode-toggle:hover {
+            color: #ff00ff;  /* 네온 핑크 */
+        }
+
         .card img {
             height: 200px;
             object-fit: cover;
