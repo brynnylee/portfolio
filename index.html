@@ -98,12 +98,8 @@
         }
         /* Dark Mode Toggle Icon Hover */
         .dark-mode-toggle:hover {
-            background: linear-gradient(135deg, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)); /* Purple to Blue gradient */
-            -webkit-background-clip: text;  /* Clip the background to the text (icon) */
-            color: transparent;  /* Make text (or icon) transparent to show the gradient */
-            transform: scale(1.1);  /* Slightly increase size for interaction */
-            box-shadow: 0 0 20px rgba(106, 17, 203, 0.8), 0 0 40px rgba(37, 117, 252, 0.6); /* Neon glowing effect */
-            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for size, background, and glow */
+            transform: scale(1.2) rotate(10deg);  /* Increase size by 20% and tilt by 10 degrees */
+            transition: transform 0.3s ease;  /* Smooth transition for size and tilt */
         }
 
 
@@ -375,21 +371,16 @@
         }
 
         
+        /* Ensure the footer icons are responsive and grow on hover */
         .footer-icons a {
-            margin: 0 10px;
-            color: white;
-            font-size: 1.5rem;
-            transition: font-size 0.3s ease;  /* Smooth transition for the font size */
+            font-size: 1.5rem;  /* Initial size of the icons */
+            transition: transform 0.3s ease;  /* Smooth transition for the transform */
         }
         
         /* Footer Icons Hover */
         .footer-icons a:hover {
-            background: linear-gradient(135deg, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)); /* Purple to Blue gradient */
-            -webkit-background-clip: text;  /* Clip the background to the text (icon) */
-            color: transparent;  /* Make text (or icon) transparent to show the gradient */
-            transform: scale(1.2);  /* Increase size by 20% for interaction */
-            box-shadow: 0 0 20px rgba(106, 17, 203, 0.8), 0 0 40px rgba(37, 117, 252, 0.6); /* Neon glowing effect */
-            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for size, background, and glow */
+            transform: scale(1.2) rotate(10deg);  /* Increase size by 20% and tilt by 10 degrees */
+            transition: transform 0.3s ease;  /* Smooth transition for size and tilt */
         }
 
 
