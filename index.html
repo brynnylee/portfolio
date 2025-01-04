@@ -127,34 +127,38 @@
         footer {
             background-color: #1a1a2e;
             color: white;
-            padding: 40px 40px;
+            padding: 40px 60px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .footer-content {
+            max-width: 100%;
+            display: flex;
             align-items: center;
             gap: 20px;
-            flex-wrap: wrap;
+            margin-left: 20px;
         }
-        .footer-content {
-            text-align: left;
-            max-width: 400px;
-            display: flex;
-            align-items: center;
-        }
+        
         .footer-avatar {
             border-radius: 50%;
             width: 120px;
             height: 120px;
             margin-right: 20px;
         }
+        
         .footer-icons a {
             margin: 0 10px;
             color: white;
             font-size: 1.5rem;
             transition: color 0.3s;
         }
+        
         .footer-icons a:hover {
             color: #4CAF50;
         }
+
 
         /* Dark Mode */
         body.dark {
