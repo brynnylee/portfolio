@@ -96,10 +96,13 @@
             color: white;
             transition: color 0.3s;
         }
+        /* Dark Mode Toggle Icon Hover */
         .dark-mode-toggle:hover {
-            color: #6a11cb;  /* Purple color (from the gradient) */
+            background: linear-gradient(135deg, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)); /* Purple to Blue gradient */
+            -webkit-background-clip: text;  /* Clip the background to the text (icon) */
+            color: transparent;  /* Make text (or icon) transparent to show the gradient */
             transform: scale(1.1);  /* Slightly increase size for interaction */
-            transition: transform 0.3s ease, color 0.3s ease;  /* Smooth transition for size and color */
+            transition: transform 0.3s ease, background 0.3s ease;  /* Smooth transition for size and background */
         }
 
 
@@ -380,9 +383,11 @@
         
         /* Footer Icons Hover */
         .footer-icons a:hover {
-            color: #6a11cb;  /* Purple color (from the gradient) */
+            background: linear-gradient(135deg, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)); /* Purple to Blue gradient */
+            -webkit-background-clip: text;  /* Clip the background to the text (icon) */
+            color: transparent;  /* Make text (or icon) transparent to show the gradient */
             transform: scale(1.1);  /* Slightly increase size for interaction */
-            transition: transform 0.3s ease, color 0.3s ease;  /* Smooth transition for size and color */
+            transition: transform 0.3s ease, background 0.3s ease;  /* Smooth transition for size and background */
         }
 
         /* SVG Background Animation */
