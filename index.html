@@ -339,56 +339,54 @@
         footer {
             background: linear-gradient(135deg, #1a1a2e, #2f2f4f);
             color: white;
-            padding: 0px 0px; /* 프로필 사진 위아래 여백 (기본:0) */ 
+            padding: 40px 20px;  /* Footer 여백 */
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
         
         .footer-content {
-            max-width: 100%;
             display: flex;
             align-items: center;
-            gap: 60px;
-            margin-left: -10px; /* 프로필 사진 왼쪽 여백 (기본:-10) */
+            gap: 40px;
+            max-width: 100%;
         }
         
         .footer-avatar {
-            width: 30%;          /* 프로필 사진의 너비 */
-            max-width: 250px;    /* 사진 최대 너비 */
-            height: auto;        /* 원본 비율 유지 */
-            object-fit: contain; /* 이미지 비율을 유지하면서 배너에 꽉 차게 */
-            border-radius: 0px;  /* 직사각형 모서리 */
+            width: 30%;              /* 프로필 이미지 너비 */
+            max-width: 200px;        /* 최대 너비 */
+            height: auto;
+            object-fit: contain;     /* 비율 유지 */
+            border-radius: 10px;     /* 모서리를 둥글게 */
         }
-
+        
         h3 {
-            margin-bottom: 15px;  /* 이름 아래 여백 추가 */
-            font-size: 1.5rem;  /* 이름 크기를 더 크게 */
-            font-weight: 700;  /* 더 두껍게 강조 */
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
         
         .footer-icons {
-            margin-top: 25px;  /* 이름과 아이콘 사이 여백 */
+            margin-top: 20px;
         }
-
-
+        
         .footer-icons a {
-            font-size: 1.5rem;  /* 기본 아이콘 크기 */
-            transition: transform 0.3s ease;  /* 부드러운 크기 전환 */
-            color: white;  /* 기본 아이콘 색상 */
+            font-size: 1.5rem;
+            color: white;
+            margin-right: 15px;     /* 아이콘 간격 */
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
         }
-
+        
         .footer-icons a:last-child {
-            margin-right: 0;  /* 마지막 아이콘은 오른쪽 여백 제거 */
+            margin-right: 0;
         }
         
         .footer-icons a:hover {
-            transform: scale(1.3) !important;  /* 30% 커지게 설정 */
-            color: white;  /* 호버 시에도 기본 색상 유지 */
+            transform: scale(1.3);  /* 확대 효과 */
+            color: white;
         }
-        .footer-icons i {
-            display: inline-block;
-        }
+
 
         /* SVG Background Animation */
         .animated-background {
