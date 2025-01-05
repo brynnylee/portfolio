@@ -318,17 +318,20 @@
         }
         .card-content {
             padding: 20px;
+            text-align: left;
         }
 
         .card-title {
             font-size: 1.5rem;
             margin-bottom: 10px;
             font-weight: 600;
+            text-align: left;
         }
         
         .card-description {
             font-size: 1rem;
             color: #666;
+            text-align: left;
         }
 
 
@@ -407,6 +410,35 @@
             }
         }
 
+        /* 모바일에서 푸터 레이아웃 변경 */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            .footer-avatar {
+                width: 100%; /* 이미지가 화면 전체 너비로 */
+                max-width: 100%; /* 최대 너비 제거 */
+                margin-bottom: 20px; /* 이미지와 텍스트 사이 간격 */
+            }
+    
+            .footer-icons {
+                text-align: left;
+                margin-top: 10px;
+            }
+    
+            h3 {
+                font-size: 1.3rem;
+            }
+    
+            header h1 {
+                font-size: 1.8rem; /* 모바일에서 이름 크기 조정 */
+            }
+        }
+
+
+        
         /* Dark Mode */
         body.dark {
             background-color: #1a1a2e;
@@ -437,7 +469,7 @@
         <p>Welcome to my portfolio website! Explore my projects, research, and media mentions below.</p>
         <p class="about">MS Data Science New Grad | AI/ML in Deepfake Detection 🕵🏻‍♀️ & Resource Optimization 🚒 | NY & CA</p>
         <p class="about">Data Scientist with 3+ years of experience in AI/ML, specializing in deepfake detection and resource optimization.</p>
-        <a href="#footer" class="btn">A Bit About Me</a> 
+        <a href="#footer" class="btn">A Bit More About Me</a> 
     </div>
     <div class="animated-background">
         <svg width="100%" height="100%">
